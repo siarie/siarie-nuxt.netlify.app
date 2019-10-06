@@ -23,6 +23,8 @@ export default {
   ** Global CSS
   */
   css: [
+    '@/assets/css/flexboxgrid.min.css',
+    '@/assets/css/siarie.css'
   ],
   /*
   ** Plugins to load before mounting the App
