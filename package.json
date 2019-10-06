@@ -1,0 +1,18 @@
+{
+  "name": "siarie.me",
+  "version": "1.0.0",
+  "description": "My remarkable Nuxt.js project",
+  "author": "Sri Aspari",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0",
+    "vue-feather-icons": "^5.0.0"
+  },
+  "devDependencies": {}
+}
