@@ -9,9 +9,9 @@
             <h2>Sri Aspari<br><span>Web Developer</span></h2>
         </div>
         <div class=m-1>
-            <a href=/ class="btn btn-default">Story</a>
-            <a href=/ class="btn btn-default">About</a>
-            <a href="/projects" class="btn btn-default">Portofolio</a>
+            <nuxt-link :to="'/'" class="btn btn-default">Story</nuxt-link>
+            <nuxt-link :to="'/'" class="btn btn-default">About</nuxt-link>
+            <nuxt-link :to="'/projects'" class="btn btn-default">Portofolio</nuxt-link>
             <!-- <a href=/ class="btn btn-default">Friends</a> -->
         </div>
         <hr class=hrline>
