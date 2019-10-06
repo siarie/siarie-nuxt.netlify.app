@@ -1,36 +1,32 @@
 <template>
-  <div class=content>
-    <main class=content-wrapper>
-      <section class=container>
-        <div class="box text-center">
-          <div class=box-wrapper>
-            <div class=image-box>
-              <img src=https://d33wubrfki0l68.cloudfront.net/08e8052685bf16c955a582db518225d98d5c8dbf/0d139/img/siarie.jpg alt="Sri Aspari">
-            </div>
-            <div class=text>
-                <h2>Sri Aspari<br><span>Web Developer</span></h2>
-            </div>
-            <div class=m-1>
-                <a href=/ class="btn btn-default">Story</a>
-                <a href=/ class="btn btn-default">About</a>
-                <a href=/ class="btn btn-default">Portofolio</a>
-                <!-- <a href=/ class="btn btn-default">Friends</a> -->
-            </div>
-            <hr class=hrline>
-            <div class=links>
-                <ul class=social>
-                    <li><a href=//twitter.com/siarie_><twitter-icon size="3x"></twitter-icon></a></li>
-                    <li><a href=//github.com/siarie><github-icon size="3x"></github-icon></a></li>
-                    <li><a href=//t.me/siarie><send-icon size="3x"></send-icon></a></li>
-                    <li><a href=mailto:mail@siarie.me><mail-icon size="3x"></mail-icon></a></li>
-                    <li><a href=/index.xml><rss-icon size="3x"></rss-icon></a></li>
-                </ul>
-            </div>
-          </div>
+  <section class=container>
+    <div class="box text-center">
+      <div class=box-wrapper>
+        <div class=image-box>
+          <img src=https://d33wubrfki0l68.cloudfront.net/08e8052685bf16c955a582db518225d98d5c8dbf/0d139/img/siarie.jpg alt="Sri Aspari">
         </div>
-      </section>
-    </main>
-  </div>
+        <div class=text>
+            <h2>Sri Aspari<br><span>Web Developer</span></h2>
+        </div>
+        <div class=m-1>
+            <a href=/ class="btn btn-default">Story</a>
+            <a href=/ class="btn btn-default">About</a>
+            <a href="/projects" class="btn btn-default">Portofolio</a>
+            <!-- <a href=/ class="btn btn-default">Friends</a> -->
+        </div>
+        <hr class=hrline>
+        <div class=links>
+            <ul class=social>
+                <li><a href=//twitter.com/siarie_><twitter-icon size="3x"></twitter-icon></a></li>
+                <li><a href=//github.com/siarie><github-icon size="3x"></github-icon></a></li>
+                <li><a href=//t.me/siarie><send-icon size="3x"></send-icon></a></li>
+                <li><a href=mailto:mail@siarie.me><mail-icon size="3x"></mail-icon></a></li>
+                <li><a href=/index.xml><rss-icon size="3x"></rss-icon></a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
