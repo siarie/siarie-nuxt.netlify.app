@@ -13,33 +13,17 @@
           <span>Web Developer</span>
         </div>
         <div class="navigation">
-          <nuxt-link :to="'/'" class="">Stories</nuxt-link>
+          <!-- <nuxt-link :to="'/'" class="">Stories</nuxt-link> -->
           <nuxt-link :to="'/about'" class="">About</nuxt-link>
           <nuxt-link :to="'/projects'" class="">Portofolio</nuxt-link>
         </div>
         <hr class="hrline" />
-        <div class="links">
-          <ul class="social">
-            <li>
-              <a href="//twitter.com/siarie_" target="_blank"
-                ><twitter-icon></twitter-icon
+        <div class="social">
+          <ul>
+            <li v-for="(data, key) in social" :key="key">
+              <a :href="data.url" target="_blank"
+                ><component :is="data.name + '-icon'"></component
               ></a>
-            </li>
-            <li>
-              <a href="//github.com/siarie" target="_blank"
-                ><github-icon></github-icon
-              ></a>
-            </li>
-            <li>
-              <a href="//t.me/siarie" target="_blank"
-                ><send-icon></send-icon
-              ></a>
-            </li>
-            <li>
-              <a href="//linkedin/in/siarie"><linkedin-icon></linkedin-icon></a>
-            </li>
-            <li>
-              <a href="mailto:mail@siarie.me"><mail-icon></mail-icon></a>
             </li>
           </ul>
         </div>
@@ -58,10 +42,11 @@ export default {
   data() {
     return {
       social: [
-        { name: 'github', url: 'https://github.com' },
-        { name: 'twitter', url: 'https://twitter.com' },
-        { name: 'send', url: 'https://t.me' },
-        { name: 'linkedin', url: 'https://linkedin.com' }
+        { name: 'twitter', url: 'https://twitter.com/siarie_' },
+        { name: 'github', url: 'https://github.com/siarie' },
+        { name: 'send', url: 'https://t.me/siarie' },
+        { name: 'linkedin', url: 'https://linkedin.com/in/siarie' },
+        { name: 'mail', url: 'mailto:sriaspari@gmail.com' }
       ]
     };
   }
@@ -123,7 +108,7 @@ export default {
   border: 0;
   border-top: 1px solid #ccc;
 }
-.links {
+.social {
   ul {
     list-style: none;
     padding: 0;
@@ -133,7 +118,6 @@ export default {
         margin-left: 15px;
       }
       a {
-        color: #dc143c;
         border: none;
       }
     }
