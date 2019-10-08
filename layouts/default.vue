@@ -4,13 +4,15 @@
       <Navbar v-if="!isHome" />
       <nuxt />
     </main>
+    <Footer v-if="!isHome"/>
   </div>
 </template>
 
 <script>
-import Navbar from './Navbar';
+import Navbar from './Navbar'
+import Footer from './Footer'
 export default {
-  components: { Navbar },
+  components: { Navbar, Footer },
 
   computed: {
     isHome() {
@@ -81,7 +83,7 @@ pre {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-  min-height: calc(100vh - 50px);
+  min-height: 100vh;
 }
 .content-wrapper {
   flex: 1;
@@ -98,6 +100,10 @@ a {
   &:hover {
     color: rgba(220, 20, 60, 0.8);
   }
+  &:focus {
+    color: rgba(220, 20, 60, 0.8);
+    outline: none;
+  }
 }
 
 blockquote {
@@ -107,5 +113,11 @@ blockquote {
 }
 .flex {
   display: flex;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  font-size: 1.35rem;
 }
 </style>
