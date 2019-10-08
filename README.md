@@ -1,6 +1,6 @@
 # siarie.me
 
-> My remarkable Nuxt.js project
+> My personal website powered by Nuxt.js
 
 ## Build Setup
 
