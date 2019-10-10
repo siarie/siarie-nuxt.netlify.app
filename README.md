@@ -19,4 +19,8 @@ $ yarn start
 $ yarn generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+Todos
+- [ ] Markdown Content.
+- [ ] Sitemap.
+- [ ] Progresive Web Apps
+- [ ] Commenting System
