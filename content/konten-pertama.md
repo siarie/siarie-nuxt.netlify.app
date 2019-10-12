@@ -1,7 +1,8 @@
 ---
 title: "Kontent Pertama Saya"
-date: 2019-10-01
+date: 2019-10-05
 thumbnail: ""
+publish: true
 ---
 
 Huh... gak tau mau diisi apa ini konten. Yah intinya *it's just example*, ini cuma contoh konten yang saya buat untuk memastikan bahwa saya berhasil menambahkan *markdown content* di website saya ini. Hmmm.. daripada berhenti disini tak cobain markdown syntak-nya sekalian deh.
@@ -21,8 +22,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat, erat
 # Blockquote
 > **Paragraph** udah oke, sekarang coba *blockquote*-nya. sekalian nyobain `code`
 
-> terus bagaimana blockquote dengan atribution.</p>
-> -- *Someone*
+> Tidak bisa disebut **quote** kalo tanpa *attribution*.</p>
+> — <cite>Nobody</cite>
 
 ## Tables
 Oke sekarang lanjut ke table
@@ -55,8 +56,8 @@ $ yarn start
 $ yarn generate
 ```
 
-```javascript
-console.log('haiiiiaj jasfuagf')
+```js
+console.log('codeblock-nya oke, syntax highlight-nya juga dah bisa')
 ```
 
 ## List Types
@@ -78,6 +79,12 @@ console.log('haiiiiaj jasfuagf')
 1. Item
     * First Sub-item
         - Second Sub-item
+
+#### Task List
+- [x] Markdown Content.
+- [ ] Sitemap.
+- [ ] Progresive Web Apps
+- [ ] Commenting System
 
 ## Lain-lain
 
