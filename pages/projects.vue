@@ -7,7 +7,7 @@
         v-for="(data, key) in projects"
         :key="key"
       >
-        <div class="text-center gallery">
+        <div class="gallery">
           <a :href="data.url" target="_blank">
             <img :src="data.image" class="gallery-image" />
             <div class="gallery-overlay"></div>
@@ -29,6 +29,11 @@ export default {
     return {
       projects: this.$store.state.projects.all
     };
+  },
+  head(){
+    return {
+      title: 'Portfolio | Siarie',
+    }
   }
 };
 </script>
@@ -95,6 +100,9 @@ export default {
       color: #fff;
       font-size: 1.2rem;
     }
+  }
+  a {
+    border: none;
   }
 }
 </style>

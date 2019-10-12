@@ -28,7 +28,7 @@ export default {
       siteTitle: 'Sri Aspari',
       checked: false,
       items: [
-        // { name: "Stories", path: "/stories" },
+        { name: 'Stories', path: '/stories' },
         { name: 'Projects', path: '/projects' }
         // { name: "Menu3", path: "/menu3" }
       ]
@@ -38,11 +38,6 @@ export default {
 </script>
 
 <style scoped>
-.sticky {
-  position: sticky;
-  top: 0;
-  z-index: 9999;
-}
 .navbar {
   background: #ffffff;
   width: 100%;
