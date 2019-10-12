@@ -1,4 +1,4 @@
-
+var path = require('path')
 export default {
   mode: 'universal',
   /*
@@ -23,7 +23,8 @@ export default {
   ** Global CSS
   */
   css: [
-    '@/assets/css/flexboxgrid.min.css'
+    '@/assets/css/flexboxgrid.min.css',
+    '~/node_modules/highlight.js/styles/github.css'
     // '@/assets/css/siarie.css'
   ],
   /*
@@ -49,6 +50,10 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
+      config.module.rules.push({
+        test: /\.md$/,
+        use: ['raw-loader']
+      })
     }
   }
 }
