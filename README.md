@@ -19,7 +19,7 @@ $ yarn start
 $ yarn generate
 ```
 
-Todos
+## Todos
 - [x] Markdown Content.
 - [ ] Sitemap.
 - [ ] Progresive Web Apps
