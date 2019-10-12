@@ -1,59 +1,52 @@
-var path = require('path')
+var glob = require('glob');
+
+let files = glob.sync('*.md', { cwd: 'content' });
+
+function getSlugs(post, _) {
+  let slug = post.substr(0, post.lastIndexOf('.'));
+  return `/stories/${slug}`;
+}
+
 export default {
   mode: 'universal',
-  /*
-  ** Headers of the page
-  */
+  generate: {
+    routes: function() {
+      return files.map(getSlugs);
+    }
+  },
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Sri Aspari | Siarie - Web Developer',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      {
+        name: 'viewport',
+        content:
+          'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'
+      },
+      // { name: 'msapplication-TileColor', content: '#ffffff' },
+      // { name: 'msapplication-TileImage', content: '/favicons/mstile-144x144.png' },
+      { name: "author", content: "Sri Aspari" },
+      { name: 'theme-color', content: '#DC143C' },
+      { name: 'robots', content: 'index, follow' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:site', content: '@siarie_' },
+      { property: 'og:type', content: 'profile' },
+      { property: 'og:updated_time', content: new Date().toISOString() }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
-  /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: '#fff' },
-  /*
-  ** Global CSS
-  */
+  loading: { color: '#DC143C' },
   css: [
     '@/assets/css/flexboxgrid.min.css',
-    '~/node_modules/highlight.js/styles/github.css'
-    // '@/assets/css/siarie.css'
+    '@/node_modules/highlight.js/styles/github.css'
   ],
-  /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: [
-  ],
-  /*
-  ** Nuxt.js dev-modules
-  */
-  buildModules: [
-  ],
-  /*
-  ** Nuxt.js modules
-  */
-  modules: [
-  ],
-  /*
-  ** Build configuration
-  */
+
   build: {
-    /*
-    ** You can extend webpack config here
-    */
-    extend (config, ctx) {
+    extend(config, ctx) {
       config.module.rules.push({
         test: /\.md$/,
         use: ['raw-loader']
-      })
+      });
     }
   }
-}
+};
