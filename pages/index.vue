@@ -13,7 +13,7 @@
           <span>Web Developer</span>
         </div>
         <div class="navigation">
-          <!-- <nuxt-link :to="'/'" class="">Stories</nuxt-link> -->
+          <nuxt-link :to="'/stories'" class="">Stories</nuxt-link>
           <nuxt-link :to="'/about'" class="">About</nuxt-link>
           <nuxt-link :to="'/projects'" class="">Portofolio</nuxt-link>
         </div>
@@ -49,6 +49,17 @@ export default {
         { name: 'mail', url: 'mailto:sriaspari@gmail.com' }
       ]
     };
+  },
+  head(){
+    return {
+      title: 'Siarie',
+      meta: [
+        { name: 'twitter:title', content: 'Sri Aspari' },
+        { name: 'twitter:description', content: 'Personal Website' },
+        { name: 'twitter:image', content: 'something.webp' },
+        { name: 'twitter:card', content: 'summary_large_image' }
+      ]
+    }
   }
 };
 </script>
