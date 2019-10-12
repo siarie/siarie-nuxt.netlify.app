@@ -36,6 +36,7 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
   loading: { color: '#DC143C' },
+  transition: 'page',
   css: [
     '@/assets/css/flexboxgrid.min.css',
     '@/node_modules/highlight.js/styles/github.css'

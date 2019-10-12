@@ -39,6 +39,8 @@ html {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
   font-size: 10px;
+  scrollbar-color: #858585 #dbdbdb;
+  scrollbar-width: thin;
 }
 body {
   padding: 0;
@@ -164,5 +166,13 @@ footer {
   width: 100%;
   text-align: center;
   font-size: 1.35rem;
+}
+
+// Transition
+.page-enter-active, .page-leave-active {
+  transition: opacity .5s
+}
+.page-enter, .page-leave-active {
+  opacity: 0
 }
 </style>
