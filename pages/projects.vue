@@ -33,6 +33,14 @@ export default {
   head(){
     return {
       title: 'Portfolio | Siarie',
+      meta: [
+        { name: "description", property: "og:description", content: 'Portfolio', hid: "description" },
+        { property: "og:title", content: 'Portfolio | Siarie' },
+        { property: "og:image", content: '' },
+        { name: 'twitter:title', content: 'Portfolio | Siarie' },
+        { name: "twitter:description", content: 'Portfolio' },
+        { name: "twitter:image", content: '' }
+      ]
     }
   }
 };

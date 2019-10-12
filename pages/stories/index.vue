@@ -38,6 +38,9 @@ export default {
         attr.slug = content.slug;
         attr.date = moment(attr.date).format('MMM DD YYYY');
         return attr;
+      })
+      .sort((a, b) => {
+        return a.date < b.date
       });
     return {
       stories: posts
@@ -45,7 +48,15 @@ export default {
   },
   head(){
     return {
-      title: 'Stories | siarie.me',
+      title: 'Stories | Siarie',
+      meta: [
+        { name: "description", property: "og:description", content: 'Story List', hid: "description" },
+        { property: "og:title", content: 'Stories | Siarie' },
+        { property: "og:image", content: '' },
+        { name: 'twitter:title', content: 'Stories | Siarie' },
+        { name: "twitter:description", content: 'Story List' },
+        { name: "twitter:image", content: '' }
+      ]
     }
   }
 };

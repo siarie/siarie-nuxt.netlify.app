@@ -52,12 +52,13 @@ export default {
   },
   head(){
     return {
-      title: 'Siarie',
       meta: [
-        { name: 'twitter:title', content: 'Sri Aspari' },
-        { name: 'twitter:description', content: 'Personal Website' },
-        { name: 'twitter:image', content: 'something.webp' },
-        { name: 'twitter:card', content: 'summary_large_image' }
+        { name: "description", property: "og:description", content: 'Personal Website', hid: "description" },
+        { property: "og:title", content: 'Sri Aspari | Siarie - Web Developer' },
+        { property: "og:image", content: '' },
+        { name: 'twitter:title', content: 'Sri Aspari | Siarie - Web Developer' },
+        { name: "twitter:description", content: 'Personal Website' },
+        { name: "twitter:image", content: '' }
       ]
     }
   }

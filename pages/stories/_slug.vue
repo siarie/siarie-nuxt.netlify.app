@@ -31,7 +31,15 @@ export default {
   },
   head() {
     return {
-      title: `${this.attributes.title} | siarie.me`
+      title: `${this.attributes.title} | Siarie`,
+      meta: [
+        { name: "description", property: "og:description", content: `${this.content}`, hid: "description" },
+        { property: "og:title", content: `${this.attributes.title} | Siarie` },
+        { property: "og:image", content: `${this.attributes.thumbnail}` },
+        { name: 'twitter:title', content: `${this.attributes.title} | Siarie` },
+        { name: "twitter:description", content: `${this.content}` },
+        { name: "twitter:image", content: `${this.attributes.thumbnail}` }
+      ]
     };
   }
 };
