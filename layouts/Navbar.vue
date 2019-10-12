@@ -29,8 +29,8 @@ export default {
       checked: false,
       items: [
         { name: 'Stories', path: '/stories' },
-        { name: 'Projects', path: '/projects' }
-        // { name: "Menu3", path: "/menu3" }
+        { name: 'Projects', path: '/projects' },
+        { name: "About", path: "/about" }
       ]
     };
   }

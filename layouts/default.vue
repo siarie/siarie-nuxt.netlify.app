@@ -29,7 +29,7 @@ export default {
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin+Slab|Poiret+One&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,700,700i&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -121,6 +121,7 @@ blockquote {
   background: rgba(220, 60, 60, 0.05);
   padding: 1px 10px;
   border-left: 4px solid #dc143c;
+  margin: 10px 0;;
 }
 .flex {
   display: flex;
