@@ -4,13 +4,13 @@
       <Navbar v-if="!isHome" />
       <nuxt />
     </main>
-    <Footer v-if="!isHome"/>
+    <Footer v-if="!isHome" />
   </div>
 </template>
 
 <script>
-import Navbar from './Navbar'
-import Footer from './Footer'
+import Navbar from './Navbar';
+import Footer from './Footer';
 export default {
   components: { Navbar, Footer },
 
@@ -50,32 +50,43 @@ body {
 }
 
 pre {
+  line-height: 1.45;
+  font-size: 1.2rem;
   width: 100%;
-  background: #f0f0f1;
+  background: #f7f7f7;
   border-radius: 5px;
   padding: 10px;
   word-wrap: break-word;
-  code {
-    font-family: 'Josefin Sans', sans-serif;
+  > code {
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
   }
 }
 
+code {
+  font-family: 'Josefin Sans', sans-serif;
+  background: #f7f7f7;
+  border-radius: 5px;
+  padding: 2px 5px;
+}
 .container {
   width: 95%;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 48rem) {
   .container {
     width: 87% !important;
   }
 }
-@media only screen and (min-width: 62em) {
+@media only screen and (min-width: 62rem) {
   .container {
     width: 87% !important;
   }
 }
-@media only screen and (min-width: 75em) {
+@media only screen and (min-width: 75rem) {
   .container {
-    width: 80% !important;
+    width: 70% !important;
   }
 }
 .content {
@@ -114,8 +125,41 @@ blockquote {
 .flex {
   display: flex;
 }
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+/* -CARD- */
+.card {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.15);
+
+  .header {
+    font-size: 1.8rem;
+    font-weight: 700;
+    border-bottom: 1px solid #ececec;
+    padding: 1.5rem;
+  }
+  .body {
+    line-height: 1.6;
+    font-size: 1.65rem;
+    padding: 2rem;
+    padding-top: 0 !important;
+  }
+  .footer {
+    border-top: 1px solid #ececec;
+    font-size: 1.4rem;
+    padding: 1.5rem;
+    a {
+      text-decoration: none;
+    }
+  }
+}
 
 footer {
+  margin-top: 2rem;
   width: 100%;
   text-align: center;
   font-size: 1.35rem;
