@@ -148,8 +148,7 @@ blockquote {
   .body {
     line-height: 1.6;
     font-size: 1.65rem;
-    padding: 2rem;
-    padding-top: 0 !important;
+    padding: 1rem 2rem;
   }
   .footer {
     border-top: 1px solid #ececec;
