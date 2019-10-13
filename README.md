@@ -23,4 +23,4 @@ $ yarn generate
 - [x] Markdown Content.
 - [ ] Sitemap.
 - [ ] Progresive Web Apps
-- [ ] Commenting System
+- [x] Commenting System
