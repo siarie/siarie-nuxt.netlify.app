@@ -38,6 +38,7 @@ export default {
   mounted() {
     let commento = document.createElement('script')
     commento.setAttribute('src', 'https://cdn.commento.io/js/commento.js')
+    commento.async = true
     let comment_section = document.getElementById('comment-section')
     document.head.appendChild(commento)
   },
