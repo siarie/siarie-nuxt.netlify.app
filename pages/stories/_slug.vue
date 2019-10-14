@@ -8,9 +8,9 @@
     </div>
     <div class="row card" style="margin-top:2rem !important;">
       <div class="col-md-12">
-        <div class="body">
+        <div class="body" id="comment-section">
           <div id="commento"></div>
-          <script src="https://cdn.commento.io/js/commento.js"></script>
+          <!-- <script src="https://cdn.commento.io/js/commento.js"></script> -->
         </div>
       </div>
     </div>
@@ -34,6 +34,12 @@ export default {
       attributes: res.attributes,
       content: marked(res.body)
     };
+  },
+  mounted() {
+    let commento = document.createElement('script')
+    commento.setAttribute('src', 'https://cdn.commento.io/js/commento.js')
+    let comment_section = document.getElementById('comment-section')
+    document.head.appendChild(commento)
   },
   head() {
     return {
