@@ -40,7 +40,7 @@ export default {
     commento.setAttribute('src', 'https://cdn.commento.io/js/commento.js')
     commento.async = true
     let comment_section = document.getElementById('comment-section')
-    document.head.appendChild(commento)
+    comment_section.appendChild(commento)
   },
   head() {
     return {
