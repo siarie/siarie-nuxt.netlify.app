@@ -55,10 +55,10 @@ export default {
       meta: [
         { name: "description", property: "og:description", content: 'Personal Website', hid: "description" },
         { property: "og:title", content: 'Sri Aspari | Siarie - Web Developer' },
-        { property: "og:image", content: '' },
+        { property: "og:image", content: '/siarie.me.webp' },
         { name: 'twitter:title', content: 'Sri Aspari | Siarie - Web Developer' },
         { name: "twitter:description", content: 'Personal Website' },
-        { name: "twitter:image", content: '' }
+        { name: "twitter:image", content: '/siarie.me.webp' }
       ]
     }
   }
