@@ -29,6 +29,9 @@ export default {
   async asyncData({ params }) {
     let files = await import(`@/content/${params.slug}.md`);
     let res = fm(files.default);
+    // if (res.attributes.publish == false) {
+    //   return false
+    // }
 
     return {
       attributes: res.attributes,
@@ -49,13 +52,13 @@ export default {
         {
           name: 'description',
           property: 'og:description',
-          content: `${this.content}`,
+          content: `${this.attributes.description}`,
           hid: 'description'
         },
         { property: 'og:title', content: `${this.attributes.title} | Siarie` },
         { property: 'og:image', content: `${this.attributes.thumbnail}` },
         { name: 'twitter:title', content: `${this.attributes.title} | Siarie` },
-        { name: 'twitter:description', content: `${this.content}` },
+        { name: 'twitter:description', content: `${this.attributes.description}` },
         { name: 'twitter:image', content: `${this.attributes.thumbnail}` }
       ]
     };
