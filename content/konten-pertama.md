@@ -2,6 +2,7 @@
 title: "Kontent Pertama Saya"
 date: 2019-10-05
 thumbnail: ""
+description: ""
 publish: true
 ---
 
