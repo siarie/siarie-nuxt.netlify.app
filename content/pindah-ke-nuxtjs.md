@@ -1,8 +1,8 @@
 ---
 title: "Pindah Ke Nuxt.Js"
 date: 2019-10-12
-thumbnail: ""
-description: ""
+thumbnail: "/siarie.me.webp"
+description: "Nuxt.Js merupakan sebuah framework untuk membuat Universal Vue.Js Application"
 publish: true
 ---
 
