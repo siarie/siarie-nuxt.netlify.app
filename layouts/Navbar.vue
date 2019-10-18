@@ -12,7 +12,7 @@
       <div class="nav-wrapper">
         <ul class="nav-list">
           <li v-for="(data, index) in items" :key="index" class="nav-item">
-            <nuxt-link :to="data.path" class="nav-link">
+            <nuxt-link :to="data.path" class="nav-link active">
               {{ data.name }}
             </nuxt-link>
           </li>
@@ -25,75 +25,80 @@
 export default {
   data() {
     return {
-      siteTitle: 'Sri Aspari',
+      siteTitle: 'siarie',
       checked: false,
       items: [
         { name: 'Stories', path: '/stories' },
         { name: 'Projects', path: '/projects' },
-        { name: "About", path: "/about" }
+        { name: 'About', path: '/about' }
       ]
     };
   }
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .navbar {
   background: #ffffff;
   width: 100%;
   padding: 15px 0;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.05);
   justify-content: space-between;
-  font-family: 'Poiret One', cursive;
   margin-bottom: 2rem;
-}
-.brand {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #000000;
-  font-weight: 700;
-  margin-right: auto;
-  outline: none;
-}
-.brand:hover {
-  color: #dc143c;
-}
-.nav-list {
-  font-size: 1.4rem;
-  display: inline-flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.nav-item:not(:first-child) {
-  margin-left: 20px;
-}
-.nav-link {
-  outline: none;
-  color: #000000;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 700;
-  border: none;
-}
-.nav-link:hover {
-  color: #000000 !important;
+  text-transform: capitalize;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600;
+
+  .brand {
+    text-decoration: none;
+    color: #000000;
+    margin-right: auto;
+    outline: none;
+    border: none;
+    &:hover {
+      color: #000;
+    }
+    &:hover::first-letter {
+      border-bottom: 2px solid #dc143c;
+      color: #dc143c;
+    }
+  }
+  .nav-list {
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    .nav-item {
+      .active {
+        border-bottom: 2px solid #dc143c;
+        color: #dc143c;
+      }
+      &:not(:first-child) {
+        margin-left: 20px;
+      }
+      &:hover::first-letter {
+        border-bottom: 2px solid #dc143c;
+        color: #dc143c;
+      }
+      .nav-link {
+        outline: none;
+        color: #000000;
+        text-decoration: none;
+        border: none;
+        &:hover {
+          color: #000000 !important;
+        }
+      }
+    }
+  }
 }
 
-.nav-item:hover::first-letter {
-  text-decoration: underline;
-  color: #dc143c;
-}
 .hidden {
   display: none;
 }
 
 @media only screen and (max-width: 48em) {
-  html {
-    font-size: 9px;
-  }
-
   .nav-btn {
     position: relative;
     z-index: 99999;

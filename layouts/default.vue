@@ -28,39 +28,45 @@ export default {
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin+Slab|Poiret+One&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,700,700i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,700,700i&display=swap');
 // @import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
 * {
   box-sizing: border-box;
 }
 html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Josefin Sans', sans-serif;
-  font-weight: 300;
   font-size: 10px;
+  text-rendering: optimizelegibility;
   scrollbar-color: #858585 #dbdbdb;
   scrollbar-width: thin;
 }
 body {
+  font-family: "Source Sans Pro",sans-serif;
+  background: #f7f8fb;
+  color: #333;
   padding: 0;
   margin: 0;
   width: 100%;
   height: 100vh;
-  background: #f7f8fb;
+  
   font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 1rem 0;
+  // color: #000000;
 }
 
 pre {
   line-height: 1.45;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   width: 100%;
   background: #f7f7f7;
   border-radius: 5px;
   padding: 10px;
   word-wrap: break-word;
   > code {
-    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+    font-family: Inconsolata;
     background: transparent;
     border-radius: 0;
     padding: 0;
@@ -68,7 +74,7 @@ pre {
 }
 
 code {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Source Sans Pro",sans-serif;
   background: #f7f7f7;
   border-radius: 5px;
   padding: 2px 5px;
@@ -121,7 +127,7 @@ a {
 
 blockquote {
   background: rgba(220, 60, 60, 0.05);
-  padding: 1px 10px;
+  padding: 20px 10px;
   border-left: 4px solid #dc143c;
   margin: 10px 0;;
 }
@@ -135,19 +141,26 @@ blockquote {
 }
 /* -CARD- */
 .card {
-  background: #fff;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  box-shadow: 0 3px 7px -1px rgba(#000, 0.15);
+  margin-bottom: 1.6%;
+  background: #FFFFFF;
+  line-height: 1.4;
   border-radius: 5px;
-  box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  border-radius: 5px;
 
   .header {
-    font-size: 1.8rem;
-    font-weight: 700;
+    // font-size: 1.8rem;
+    // font-weight: 700;
     border-bottom: 1px solid #ececec;
     padding: 1.5rem;
   }
   .body {
     line-height: 1.6;
-    font-size: 1.65rem;
+    font-size: 1.5rem;
     padding: 1rem 2rem;
   }
   .footer {

@@ -1,10 +1,8 @@
 <template>
   <section class="container" :key="$route.params.slug">
-    <div class="row card mt-2">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <div class="header">{{ attributes.title }}</div>
+    <div class="row card">
+        <div class="header"><h1>{{ attributes.title }}</h1></div>
         <div class="body" v-html="content"></div>
-      </div>
     </div>
     <div class="row card" style="margin-top:2rem !important;">
       <div class="col-md-12">

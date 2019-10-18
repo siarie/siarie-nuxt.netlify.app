@@ -8,14 +8,13 @@
           alt="Sri Aspari">
         </div>
         <div class="text">
-          <!-- <p>Hello, I'm Sri Aspari a Web Developer</p> -->
           <h2>Sri Aspari</h2>
           <span>Web Developer</span>
         </div>
         <div class="navigation">
-          <nuxt-link :to="'/stories'" class="">Stories</nuxt-link>
-          <nuxt-link :to="'/about'" class="">About</nuxt-link>
-          <nuxt-link :to="'/projects'" class="">Portofolio</nuxt-link>
+          <nuxt-link :to="'/stories'" class="">stories</nuxt-link>
+          <nuxt-link :to="'/about'" class="">about</nuxt-link>
+          <nuxt-link :to="'/projects'" class="">portofolio</nuxt-link>
         </div>
         <hr class="hrline" />
         <div class="social">
@@ -70,6 +69,7 @@ export default {
   background: #ffffff;
   width: 100%;
   height: 100vh;
+  font-family: "Josefin Sans",sans-serif;
 }
 
 .box {
@@ -119,6 +119,7 @@ export default {
   height: 1px;
   border: 0;
   border-top: 1px solid #ccc;
+  margin: .5rem 0;
 }
 .social {
   ul {
