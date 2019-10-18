@@ -28,7 +28,7 @@ export default {
       { name: "author", content: "Sri Aspari" },
       { name: 'theme-color', content: '#DC143C' },
       { name: 'robots', content: 'index, follow' },
-      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:card', content: 'summary' },
       { name: 'twitter:site', content: '@siarie_' },
       { property: 'og:type', content: 'profile' },
       { property: 'og:updated_time', content: new Date().toISOString() }
@@ -36,7 +36,7 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
   loading: { color: '#DC143C' },
-  transition: 'page',
+  pageTransition: 'page',
   css: [
     '@/assets/css/flexboxgrid.min.css',
     '@/node_modules/highlight.js/styles/github.css'
