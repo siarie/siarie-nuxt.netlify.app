@@ -12,9 +12,14 @@
       <div class="nav-wrapper">
         <ul class="nav-list">
           <li v-for="(data, index) in items" :key="index" class="nav-item">
-            <nuxt-link :to="data.path" class="nav-link active">
+            <nuxt-link :to="data.path" class="nav-link">
               {{ data.name }}
             </nuxt-link>
+          </li>
+          <li class="nav-item">
+            <a :href="`/rss.xml`" class="nav-link">
+              rss
+            </a>
           </li>
         </ul>
       </div>

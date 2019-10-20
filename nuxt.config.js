@@ -41,7 +41,24 @@ export default {
     '@/assets/css/flexboxgrid.min.css',
     '@/node_modules/highlight.js/styles/github.css'
   ],
-
+  modules: [
+    '@nuxtjs/sitemap'
+  ],
+  sitemap: {
+    hostname: 'https://siarie.me',
+    routes: function() {
+      return files.map(getSlugs);
+    },
+    exclude: [
+      '/',
+      '/about',
+      '/stories',
+      '/projects'
+    ],
+    path: '/rss.xml',
+    gzip: true,
+    generate: false,
+  },
   build: {
     extend(config, ctx) {
       config.module.rules.push({

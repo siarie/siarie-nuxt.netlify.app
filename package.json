@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@nuxtjs/markdownit": "^1.2.7",
+    "@nuxtjs/sitemap": "^2.0.0",
     "frontmatter-markdown-loader": "^2.1.0",
     "highlight.js": "^9.15.10",
     "marked": "^0.7.0",
