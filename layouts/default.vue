@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin+Slab|Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Amiri:400,400i,700,700i&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,700,700i&display=swap');
 // @import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
 * {
@@ -40,33 +40,38 @@ html {
   scrollbar-width: thin;
 }
 body {
-  font-family: "Source Sans Pro",sans-serif;
+  font-family: 'Amiri', serif;
+  line-height: 1.4;
   background: #f7f8fb;
   color: #333;
   padding: 0;
   margin: 0;
   width: 100%;
   height: 100vh;
-  
-  font-size: 1.4rem;
-  line-height: 1.5;
+  font-size: 1.6rem;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 1rem 0;
   // color: #000000;
 }
 
 pre {
+  overflow: auto;
   line-height: 1.45;
   font-size: 1.4rem;
   width: 100%;
   background: #f7f7f7;
   border-radius: 5px;
   padding: 10px;
-  word-wrap: break-word;
+  word-wrap: normal;
   > code {
-    font-family: Inconsolata;
+    font-family: 'Inconsolata';
     background: transparent;
     border-radius: 0;
     padding: 0;
@@ -74,7 +79,7 @@ pre {
 }
 
 code {
-  font-family: "Source Sans Pro",sans-serif;
+  font-family: inherit;
   background: #f7f7f7;
   border-radius: 5px;
   padding: 2px 5px;
@@ -127,9 +132,9 @@ a {
 
 blockquote {
   background: rgba(220, 60, 60, 0.05);
-  padding: 20px 10px;
+  padding: 5px 10px;
   border-left: 4px solid #dc143c;
-  margin: 10px 0;;
+  margin: 10px 0;
 }
 .flex {
   display: flex;
@@ -146,27 +151,22 @@ blockquote {
   margin: 1rem auto;
   box-shadow: 0 3px 7px -1px rgba(#000, 0.15);
   margin-bottom: 1.6%;
-  background: #FFFFFF;
-  line-height: 1.4;
+  background: #ffffff;
   border-radius: 5px;
   overflow: hidden;
   border-radius: 5px;
 
   .header {
-    // font-size: 1.8rem;
-    // font-weight: 700;
     border-bottom: 1px solid #ececec;
-    padding: 1.5rem;
+    padding: 0 2rem;
   }
   .body {
-    line-height: 1.6;
-    font-size: 1.5rem;
     padding: 1rem 2rem;
   }
   .footer {
     border-top: 1px solid #ececec;
     font-size: 1.4rem;
-    padding: 1.5rem;
+    padding: 1rem 2rem;
     a {
       text-decoration: none;
     }
@@ -181,10 +181,12 @@ footer {
 }
 
 // Transition
-.page-enter-active, .page-leave-active {
-  transition: opacity .5s
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
 }
-.page-enter, .page-leave-active {
-  opacity: 0
+.page-enter,
+.page-leave-active {
+  opacity: 0;
 }
 </style>
