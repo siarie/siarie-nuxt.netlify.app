@@ -21,6 +21,6 @@ $ yarn generate
 
 ## Todos
 - [x] Markdown Content.
-- [ ] Sitemap.
+- [x] Sitemap.
 - [ ] Progresive Web Apps
 - [x] Commenting System
