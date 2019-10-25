@@ -11,6 +11,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/feed": "^1.1.0",
     "@nuxtjs/markdownit": "^1.2.7",
     "@nuxtjs/sitemap": "^2.0.0",
     "frontmatter-markdown-loader": "^2.1.0",
@@ -20,6 +21,7 @@
     "node-sass": "^4.12.0",
     "nuxt": "^2.0.0",
     "sass-loader": "^8.0.0",
+    "striptags": "^3.1.1",
     "vue-feather-icons": "^5.0.0"
   },
   "devDependencies": {}
