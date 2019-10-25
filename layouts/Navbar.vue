@@ -16,11 +16,6 @@
               {{ data.name }}
             </nuxt-link>
           </li>
-          <li class="nav-item">
-            <a :href="`/rss.xml`" class="nav-link">
-              rss
-            </a>
-          </li>
         </ul>
       </div>
     </div>
