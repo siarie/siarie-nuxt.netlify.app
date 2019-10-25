@@ -1,6 +1,24 @@
 # siarie.me
+## Siarie's personal homepage
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9a2076ee-d49f-4a9c-b52e-3c8eec70ab55/deploy-status)](https://app.netlify.com/sites/siarie-nuxt/deploys)
 
-> My personal website powered by Nuxt.js
+Link: <https://siarie.me>
+
+Powered By:
++ Vue/Nuxt.js
++ Markdown for text formatting
++ Netlify for Hosting
+
+## On Going Features
+- [x] Markdown text formatting
+- [x] Sitemap & RSS Feed
+- [ ] Lazy Load for image
+- [ ] Status for post ("published", "draft")
+- [ ] Mobile Friendly & PWA
+- [ ] Comment System
+- [ ] Posts Pagination
+- [ ] Search Posts
+- [ ] Social share (FB, Twitter, etc)
 
 ## Build Setup
 
@@ -18,9 +36,3 @@ $ yarn start
 # generate static project
 $ yarn generate
 ```
-
-## Todos
-- [x] Markdown Content.
-- [x] Sitemap.
-- [ ] Progresive Web Apps
-- [x] Commenting System
