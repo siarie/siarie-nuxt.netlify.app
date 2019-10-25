@@ -12,13 +12,14 @@ Powered By:
 ## On Going Features
 - [x] Markdown text formatting
 - [x] Sitemap & RSS Feed
+- [x] Status for post ("published", "draft")
 - [ ] Lazy Load for image
-- [ ] Status for post ("published", "draft")
 - [ ] Mobile Friendly & PWA
 - [ ] Comment System
 - [ ] Posts Pagination
 - [ ] Search Posts
 - [ ] Social share (FB, Twitter, etc)
+- [ ] Custom error pages
 
 ## Build Setup
 

@@ -25,7 +25,8 @@
 export default {
   computed: {
     stories(){
-      return this.$store.state.article.feeds
+      const feed = this.$store.state.article.feeds
+      return feed.filter(status => status.publish === true)
     }
   },
   methods: {
