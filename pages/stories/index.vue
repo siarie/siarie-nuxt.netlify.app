@@ -11,10 +11,7 @@
           </div>
           <div class="description">
             <h1>{{ data.title }}</h1>
-            <p>
-              {{ data.description + '...' }}
-              <!-- Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima error consectetur maxime ea doloribus laboriosam. -->
-            </p>
+            <p v-html="articleExcerpt(data)"></p>
             <p class="read-more">
               <nuxt-link :to="`/stories/${data.slug}`">Read More</nuxt-link>
             </p>
@@ -26,32 +23,19 @@
 </template>
 <script>
 export default {
-  async asyncData() {
-    const fm = require('front-matter');
-    const moment = require('moment');
-    moment.locale('id');
-    const data = await require.context('@/content/', false, /\.md$/);
-    const posts = data
-      .keys()
-      .map(key => {
-        // const [, name] = key.match(/\/(.+)\.md$/)
-        // return data(key)
-        let res = data(key);
-        res.slug = key.slice(2, -3);
-        return res;
-      })
-      .map(content => {
-        let attr = fm(content.default).attributes;
-        attr.slug = content.slug;
-        attr.date = moment(attr.date).format('MMM DD YYYY');
-        return attr;
-      })
-      .sort((a, b) => {
-        return a.date < b.date;
-      });
-    return {
-      stories: posts
-    };
+  computed: {
+    stories(){
+      return this.$store.state.article.feeds
+    }
+  },
+  methods: {
+    articleExcerpt(data) {
+      if (data.description === '') {
+        const striptags = require('striptags')
+        data.description = striptags(data.excerpt).split(/\s+/, 13).join(' ')
+      }
+      return data.description + '...'
+    }
   },
   head() {
     return {
@@ -189,7 +173,7 @@ $color_grey_dark: #a2a2a2;
     .description {
       flex-basis: 60%;
       &:before {
-        transform: skewX(-3deg);
+        // transform: skewX(-3deg);
         content: '';
         background: #fff;
         width: 30px;
@@ -198,19 +182,6 @@ $color_grey_dark: #a2a2a2;
         top: 0;
         bottom: 0;
         z-index: -1;
-      }
-    }
-    &.alt {
-      flex-direction: row-reverse;
-      .description {
-        &:before {
-          left: inherit;
-          right: -10px;
-          transform: skew(3deg);
-        }
-      }
-      .details {
-        padding-left: 25px;
       }
     }
   }
