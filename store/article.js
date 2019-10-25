@@ -8,12 +8,6 @@ export const mutations = {
   }
 };
 
-export const getters = {
-  getPostBySlug: (state) => (slug) => {
-    return state.feeds.find(post => post.slug === slug)
-  }
-}
-
 export const actions = {
    BlogFeeds({ commit }) {
     const moment = require('moment');
