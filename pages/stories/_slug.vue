@@ -6,8 +6,8 @@
       </div>
       <div class="body" v-html="content"></div>
       <div class="footer">
-        <button v-on:click="alert"><component size="1.5x" :is="`message-circle-icon`"></component></button>
-        <button v-on:click="alert"><component size="1.5x" :is="`heart-icon`"></component></button>
+        <button v-on:click="openComment"><component size="1.5x" :is="`message-circle-icon`"></component><span>10</span></button>
+        <button v-on:click="alert"><component size="1.5x" fill="#DC143C" stroke="#DC143C" :is="`heart-icon`"></component><span>10</span></button>
         <button v-on:click="alert" style="float: right"><component size="1.5x" :is="`bookmark-icon`"></component></button>
       </div>
     </div>
@@ -50,8 +50,9 @@ export default {
   },
   mounted() {
     let commento = document.createElement('script');
+    commento.defer = true;
     commento.setAttribute('src', 'https://cdn.commento.io/js/commento.js');
-    commento.async = true;
+    commento.setAttribute('data-auto-init', 'false');
     let comment_section = document.getElementById('comment-section');
     comment_section.appendChild(commento);
   },
@@ -79,6 +80,9 @@ export default {
   methods: {
     alert: function(event) {
       alert('This feature is not available right now')
+    },
+    openComment: function(){
+      return window.commento.main()
     }
   }
 };
@@ -86,9 +90,23 @@ export default {
 
 <style lang="scss" scoped>
 button {
+  display: inline-flex;
+  align-items: center;
   border: none;
   background: transparent;
   padding: 0;
   cursor: pointer;
+  &:hover {
+    color: #DC143C;
+  }
+  &:focus {
+    color: #DC143C;
+    outline: none
+  }
+}
+
+span {
+  margin: 0 2px;
+  font-size: 8px;
 }
 </style>
