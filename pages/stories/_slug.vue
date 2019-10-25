@@ -11,14 +11,12 @@
         <button v-on:click="alert" style="float: right"><component size="1.5x" :is="`bookmark-icon`"></component></button>
       </div>
     </div>
-    <div class="card" style="margin-top:2rem !important;">
+    <!-- <div class="card" style="margin-top:2rem !important;">
       <div class="col-md-12">
         <div class="body" id="comment-section">
-          <div id="commento"></div>
-          <!-- <script src="https://cdn.commento.io/js/commento.js"></script> -->
         </div>
       </div>
-    </div>
+    </div> -->
   </section>
 </template>
 <script>
@@ -28,7 +26,8 @@ const marked = require('marked');
 marked.setOptions({
   highlight: function(code, lang) {
     return hljs.highlight(lang, code).value;
-  }
+  },
+  gfm: true
 });
 import * as icons from 'vue-feather-icons';
 
@@ -39,22 +38,11 @@ export default {
   async asyncData({ params }) {
     let files = await import(`@/content/${params.slug}.md`);
     let res = fm(files.default);
-    // if (res.attributes.publish == false) {
-    //   return false
-    // }
 
     return {
       attributes: res.attributes,
       content: marked(res.body)
     };
-  },
-  mounted() {
-    let commento = document.createElement('script');
-    commento.defer = true;
-    commento.setAttribute('src', 'https://cdn.commento.io/js/commento.js');
-    commento.setAttribute('data-auto-init', 'false');
-    let comment_section = document.getElementById('comment-section');
-    comment_section.appendChild(commento);
   },
   head() {
     return {
