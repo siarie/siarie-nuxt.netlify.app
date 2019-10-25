@@ -54,7 +54,11 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     noscript: [{ innerHTML: 'This website requires JavaScript :)', body: true }]
   },
-  loading: { color: '#DC143C' },
+  loading: { 
+    continous: true,
+    color: '#DC143C',
+    height: '2.5px'
+  },
   pageTransition: 'page',
   css: [
     '@/assets/css/flexboxgrid.min.css',
