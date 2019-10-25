@@ -66,7 +66,7 @@ pre {
   line-height: 1.45;
   font-size: 1.4rem;
   width: 100%;
-  background: #f7f7f7;
+  background: #f6f8fa;
   border-radius: 5px;
   padding: 10px;
   word-wrap: normal;
@@ -118,14 +118,12 @@ code {
 }
 a {
   text-decoration: none;
-  font-weight: 400;
-  border-bottom: 2px solid #dc143c;
   color: #dc143c;
   &:hover {
-    color: rgba(220, 20, 60, 0.8);
+    color: inherit;
   }
   &:focus {
-    color: rgba(220, 20, 60, 0.8);
+    color: rgba(#dc143c, 0.8);
     outline: none;
   }
 }
