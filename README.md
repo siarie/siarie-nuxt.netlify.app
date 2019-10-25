@@ -1,6 +1,6 @@
-# siarie.me
+# Siarie.Me
 ## Siarie's personal homepage
-[![Netlify Status](https://api.netlify.com/api/v1/badges/9a2076ee-d49f-4a9c-b52e-3c8eec70ab55/deploy-status)](https://app.netlify.com/sites/siarie-nuxt/deploys)
+![Netlify Status](https://api.netlify.com/api/v1/badges/9a2076ee-d49f-4a9c-b52e-3c8eec70ab55/deploy-status)
 
 Link: <https://siarie.me>
 
@@ -14,6 +14,7 @@ Powered By:
 - [x] Sitemap & RSS Feed
 - [x] Status for post ("published", "draft")
 - [ ] Lazy Load for image
+- [ ] Skeleton screens
 - [ ] Mobile Friendly & PWA
 - [ ] Comment System
 - [ ] Posts Pagination
