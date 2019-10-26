@@ -89,17 +89,17 @@ code {
 }
 @media only screen and (min-width: 48rem) {
   .container {
-    width: 87% !important;
+    width: 77% !important;
   }
 }
 @media only screen and (min-width: 62rem) {
   .container {
-    width: 87% !important;
+    width: 77% !important;
   }
 }
 @media only screen and (min-width: 75rem) {
   .container {
-    width: 70% !important;
+    width: 50% !important;
   }
 }
 .content {
