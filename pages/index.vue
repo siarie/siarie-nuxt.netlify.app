@@ -4,7 +4,7 @@
       <div class="box-wrapper">
         <div class="image-box">
           <img
-          src=https://d33wubrfki0l68.cloudfront.net/08e8052685bf16c955a582db518225d98d5c8dbf/0d139/img/siarie.jpg
+          :src="`/avatar.webp`"
           alt="Sri Aspari">
         </div>
         <div class="text">

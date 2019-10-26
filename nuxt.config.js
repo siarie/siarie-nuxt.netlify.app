@@ -65,7 +65,8 @@ export default {
       { rel: 'apple-touch-icon', href: '/favicons/apple-touch-icon-152x152.png', sizes: '152x152' },
       { rel: 'apple-touch-icon', href: '/favicons/apple-touch-icon-180x180.png', sizes: '180x180' },
       { rel: 'mask-icon', type: 'image/png', href: '/favicons/safari-pinned-tab.svg', color: '#c1c1c1' },
-      { rel: 'manifest', href: '/favicons/manifest.json' }
+      { rel: 'manifest', href: '/favicons/manifest.json' },
+      { rel: 'stylesheet', href: '/css/flexboxgrid.min.css' }
     ],
     noscript: [{ innerHTML: 'This website requires JavaScript :)', body: true }]
   },
@@ -76,7 +77,6 @@ export default {
   },
   pageTransition: 'page',
   css: [
-    '@/assets/css/flexboxgrid.min.css',
     '@/node_modules/highlight.js/styles/github.css'
   ],
   modules: ['@nuxtjs/feed', '@nuxtjs/sitemap'],
