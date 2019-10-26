@@ -2,7 +2,7 @@
   <section class="container">
     <div class="row">
       <div
-        class="col-md-4"
+        class="col-md-6"
         style="margin-bottom: 1rem"
         v-for="(data, key) in projects"
         :key="key"
