@@ -1,32 +1,31 @@
 <template>
   <section class="container">
-    <div class="row">
-      <div class="col-md-6 col-sm-12" v-for="(data, key) in stories" :key="key">
-        <div class="blog-card">
+    <!-- <div class="row"> -->
+      <!-- <div class="col-md-6 col-sm-12" v-for="(data, key) in stories" :key="key"> -->
+        <div class="blog-card" v-for="(data, key) in stories" :key="key">
           <div class="meta">
             <div
               class="photo"
-              :style="{backgroundImage: 'url(' + data.thumbnail + ')' }"
+              :style="{backgroundImage: 'url(' + imageThumb(data.thumbnail) + ')' }"
             ></div>
           </div>
           <div class="description">
             <h1>{{ data.title }}</h1>
-            <p v-html="articleExcerpt(data)"></p>
+            <p class="excerpt" v-html="articleExcerpt(data)"></p>
             <p class="read-more">
               <nuxt-link :to="`/stories/${data.slug}`">Read More</nuxt-link>
             </p>
           </div>
         </div>
-      </div>
-    </div>
+      <!-- </div> -->
+    <!-- </div> -->
   </section>
 </template>
 <script>
 export default {
-  computed: {
-    stories(){
-      const feed = this.$store.state.article.feeds
-      return feed.filter(status => status.publish === true)
+  data() {
+    return {
+      stories: this.$store.getters["article/getPublishedArticle"]
     }
   },
   methods: {
@@ -36,6 +35,13 @@ export default {
         data.description = striptags(data.excerpt).split(/\s+/, 13).join(' ')
       }
       return data.description + '...'
+    },
+
+    imageThumb(image) {
+      if (image === '') {
+        image = '/siarie.me.webp'
+      }
+      return image
     }
   },
   head() {
@@ -66,16 +72,16 @@ $color_grey_dark: #a2a2a2;
 
 .blog-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: 1rem auto;
   box-shadow: 0 3px 7px -1px rgba(#000, 0.1);
   margin-bottom: 1.6%;
   background: $color_white;
   line-height: 1.4;
-  // font-family: sans-serif;
   border-radius: 5px;
   overflow: hidden;
   z-index: 0;
+  min-height: 170px;
   a {
     color: inherit;
     &:hover {
@@ -108,19 +114,16 @@ $color_grey_dark: #a2a2a2;
     background: $color_white;
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
     h1 {
       line-height: 1;
       margin: 0;
       font-size: 1.7rem;
     }
-    h2 {
-      font-size: 1rem;
-      font-weight: 300;
-      text-transform: uppercase;
-      color: $color_grey_dark;
-      margin-top: 5px;
-    }
     .read-more {
+      margin: 0;
+      position: relative;
       text-align: right;
       a {
         color: $color_prime;
@@ -142,7 +145,8 @@ $color_grey_dark: #a2a2a2;
       }
     }
   }
-  p {
+  p.excerpt {
+    flex: 1;
     position: relative;
     margin: 1rem 0 0;
     &:first-of-type {

@@ -8,6 +8,12 @@ export const mutations = {
   }
 };
 
+export const getters = {
+  getPublishedArticle: (state) => {
+    return state.feeds.filter(status => status.publish === true)
+  }
+}
+
 export const actions = {
    BlogFeeds({ commit }) {
     const moment = require('moment');
