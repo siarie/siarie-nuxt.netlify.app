@@ -66,6 +66,8 @@ export default {
       { rel: 'apple-touch-icon', href: '/favicons/apple-touch-icon-180x180.png', sizes: '180x180' },
       { rel: 'mask-icon', type: 'image/png', href: '/favicons/safari-pinned-tab.svg', color: '#c1c1c1' },
       { rel: 'manifest', href: '/favicons/manifest.json' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Amiri:400,400i,700,700i&display=swap' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,700,700i&display=swap' },
       { rel: 'stylesheet', href: '/css/flexboxgrid.min.css' }
     ],
     noscript: [{ innerHTML: 'This website requires JavaScript :)', body: true }]
