@@ -1,7 +1,5 @@
 <template>
   <section class="container">
-    <!-- <div class="row"> -->
-      <!-- <div class="col-md-6 col-sm-12" v-for="(data, key) in stories" :key="key"> -->
         <div class="blog-card" v-for="(data, key) in stories" :key="key">
           <div class="meta">
             <div
@@ -17,8 +15,6 @@
             </p>
           </div>
         </div>
-      <!-- </div> -->
-    <!-- </div> -->
   </section>
 </template>
 <script>
@@ -130,8 +126,7 @@ $color_grey_dark: #a2a2a2;
         display: inline-block;
         position: relative;
         &:after {
-          content: '\f061';
-          font-family: FontAwesome;
+          content: '\21C1';
           margin-left: -10px;
           opacity: 0;
           vertical-align: middle;
