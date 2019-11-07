@@ -11,14 +11,15 @@
         <button v-on:click="alert" style="float: right"><component size="1.5x" :is="`bookmark-icon`"></component></button>
       </div>
     </div>
-    <!-- <div class="card" style="margin-top:2rem !important;">
+    <div class="card" style="margin-top:2rem !important;">
       <div class="col-md-12">
-        <div class="body" id="comment-section">
+        <div class="body" id="commento">
         </div>
       </div>
-    </div> -->
+    </div>
   </section>
 </template>
+
 <script>
 const hljs = require('highlight.js');
 const fm = require('front-matter');
@@ -47,6 +48,9 @@ export default {
   head() {
     return {
       title: `${this.attributes.title} | Siarie`,
+      script: [
+        { src: 'https://cdn.commento.io/js/commento.js', defer: true }
+      ],
       meta: [
         {
           name: 'description',
@@ -62,7 +66,7 @@ export default {
           content: `${this.attributes.description}`
         },
         { name: 'twitter:image', content: `${this.attributes.thumbnail}` }
-      ]
+      ],
     };
   },
   methods: {
