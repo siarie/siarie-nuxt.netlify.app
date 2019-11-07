@@ -68,6 +68,7 @@ export default {
       { rel: 'manifest', href: '/favicons/manifest.json' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Amiri:400,400i,700,700i&display=swap' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,700,700i&display=swap' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap' },
       { rel: 'stylesheet', href: '/css/flexboxgrid.min.css' }
     ],
     noscript: [{ innerHTML: 'This website requires JavaScript :)', body: true }]
