@@ -1,5 +1,5 @@
 ---
-title: "Kontent Pertama Saya"
+title: "Konten Pertama Saya"
 date: 2019-10-05
 thumbnail: "/siarie.me.webp"
 description: "ini cuma contoh konten yang saya buat untuk memastikan bahwa saya berhasil menambahkan markdown"
