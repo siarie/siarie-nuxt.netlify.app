@@ -18,7 +18,6 @@
           </a>
         </div>
       </div>
-      {{ end }}
     </div>
   </section>
 </template>
