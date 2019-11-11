@@ -3,8 +3,8 @@
     <div class="container flex">
       <nuxt-link to="/" class="brand">{{ siteTitle }}</nuxt-link>
 
-      <input id="nav" type="checkbox" class="hidden" :checked="checked" />
-      <label for="nav" class="nav-btn">
+      <input id="nav" type="checkbox" class="hidden" v-bind:checked="checked" />
+      <label @click="checked = true" class="nav-btn">
         <i></i>
         <i></i>
         <i></i>
@@ -12,9 +12,7 @@
       <div class="nav-wrapper">
         <ul class="nav-list">
           <li v-for="(data, index) in items" :key="index" class="nav-item">
-            <nuxt-link :to="data.path" class="nav-link">
-              {{ data.name }}
-            </nuxt-link>
+            <nuxt-link :to="data.path" @click.native="closeNav" class="nav-link">{{ data.name }}</nuxt-link>
           </li>
         </ul>
       </div>
@@ -25,14 +23,20 @@
 export default {
   data() {
     return {
-      siteTitle: 'siarie',
+      siteTitle: "siarie",
       checked: false,
       items: [
-        { name: 'Stories', path: '/stories' },
-        { name: 'Projects', path: '/projects' },
-        { name: 'About', path: '/about' }
+        { name: "Stories", path: "/stories" },
+        { name: "Projects", path: "/projects" },
+        { name: "About", path: "/about" }
       ]
     };
+  },
+
+  methods: {
+    closeNav() {
+      this.checked = !this.checked;
+    }
   }
 };
 </script>
@@ -47,7 +51,7 @@ export default {
   justify-content: space-between;
   margin-bottom: 2rem;
   text-transform: capitalize;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
 
   .brand {
@@ -133,12 +137,12 @@ export default {
     left: 0;
     opacity: 0;
     visibility: hidden;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: "Josefin Sans", sans-serif;
     transition: all 0.375s;
   }
 
   .nav-wrapper::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     bottom: 0;
