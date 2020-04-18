@@ -1,7 +1,7 @@
 <template lang="pug">
   section.blog
     article.article(v-for="(data, key) in posts" :key="key")
-      a(:href="`/${data.slug}`" :title="data.title")
+      nuxt-link(:to="`/${data.slug}`" :title="data.title")
         .meta
           time(:datetime="data.date") {{ dateFromNow(data.date) }}
         h5 {{ data.title }}
