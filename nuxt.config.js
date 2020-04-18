@@ -56,10 +56,6 @@ export default {
     routes
   },
 
-  render: {
-    ssr: false
-  },
-
   css: [
     '~assets/sass/main.sass',
     'highlight.js/scss/dracula.scss'
