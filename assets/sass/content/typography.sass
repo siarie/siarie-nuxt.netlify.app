@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+html
+  // font-family: 'Ubuntu', sans-serif
+  // font-family: Georgia, 'Times New Roman', Times, serif
+  font-family: 'Roboto', sans-serif
+
+a
+  text-decoration: none
+  color: #dd0044
+  &:hover
+    color: #dd0044aa
+
+%heading
+  color: #2A2A2A
+  font-family: 'Josefin Sans', sans-serif
+  font-weight: 600
+  line-height: 1.2
+  margin: 0
+    bottom: $font-size-default / 2
+
+h1
+  @extend %heading
+  font-size: $font-size-default * 2.5
+
+h2
+  @extend %heading
+  font-size: $font-size-default * 2
+
+h3
+  @extend %heading
+  font-size: $font-size-default * 1.75
+
+h4
+  @extend %heading
+  font-size: $font-size-default * 1.5
+
+h5
+  @extend %heading
+  font-size: $font-size-default * 1.25
+
+h6
+  @extend %heading
+  font-size: $font-size-default
+
+p
+  margin:
+    bottom: 20px

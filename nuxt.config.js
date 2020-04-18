@@ -1,35 +1,17 @@
-const glob = require('glob');
-const fs = require('fs');
-const fm = require('front-matter');
-const marked = require('marked');
+const glob = require('glob')
 
-let files = glob.sync('*.md', { cwd: 'content' });
-function getSlugs(post, _) {
-  let slug = post.substr(0, post.lastIndexOf('.'));
-  return `/stories/${slug}`;
-}
-
-const env = {
-  productionUrl: 'https://siarie.me',
-  author: 'Sri Aspari'
-};
+const files = glob.sync('**/*.md', {cwd: 'contents/articles'})
+const routes = files.map( filename => {
+  const slug = filename.slice(0, -3)
+  return `/${slug}`
+})
 
 export default {
   mode: 'universal',
 
-  env: {
-    PRODUCTION_URL: env.productionUrl,
-    AUTHOR: env.author
-  },
-
-  generate: {
-    routes: function() {
-      return files.map(getSlugs);
-    }
-  },
   head: {
-    title: 'Siarie',
-    meta: [
+    title: 'Sri Aspari',
+    meta : [
       { charset: 'utf-8' },
       {
         name: 'viewport',
@@ -41,8 +23,8 @@ export default {
         name: 'msapplication-TileImage',
         content: '/favicons/ms-icon-144x144.png'
       },
-      { name: 'author', content: env.author },
-      { name: 'theme-color', content: '#DC143C' },
+      { name: 'author', content: 'Sri Aspari' },
+      { name: 'theme-color', content: '#DD0044' },
       { name: 'robots', content: 'index, follow' },
       { name: 'twitter:card', content: 'summary' },
       { name: 'twitter:site', content: '@siarie_' },
@@ -65,75 +47,30 @@ export default {
       { rel: 'apple-touch-icon', href: '/favicons/apple-touch-icon-152x152.png', sizes: '152x152' },
       { rel: 'apple-touch-icon', href: '/favicons/apple-touch-icon-180x180.png', sizes: '180x180' },
       { rel: 'mask-icon', type: 'image/png', href: '/favicons/safari-pinned-tab.svg', color: '#c1c1c1' },
-      { rel: 'manifest', href: '/favicons/manifest.json' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Amiri:400,400i,700,700i&display=swap' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,700,700i&display=swap' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap' },
-      { rel: 'stylesheet', href: '/css/flexboxgrid.min.css' }
+      { rel: 'manifest', href: '/favicons/manifest.json' }
     ],
     noscript: [{ innerHTML: 'This website requires JavaScript :)', body: true }]
   },
-  loading: { 
-    continous: true,
-    color: '#DC143C',
-    height: '2.5px'
+
+  generate: {
+    routes
   },
-  pageTransition: 'page',
+
+  render: {
+    ssr: false
+  },
+
   css: [
-    '@/node_modules/highlight.js/styles/github.css'
+    '~assets/sass/main.sass',
+    'highlight.js/scss/dracula.scss'
   ],
-  modules: ['@nuxtjs/feed', '@nuxtjs/sitemap'],
-  sitemap: {
-    sitemap: {
-      path: '/sitemap.xml',
-      hostname: env.productionUrl,
-      cacheTime: 1000 * 60 * 15,
-      gzip: true,
-      routes: function() {
-        return files.map(getSlugs);
-      }
-    }
-  },
-  feed: [
-    {
-      path: '/stories/feed.xml',
-      cacheTime: 1000 * 60 * 15,
-      type: 'atom1',
-      async create(feed) {
-        feed.options = {
-          title: env.author,
-          link: `${env.productionUrl}/stories/feed.xml`,
-          description: "siarie's personal homepage"
-        };
 
-        feed.addCategory('Personal Blog');
-
-        feed.addContributor({
-          name: env.author,
-          email: 'mail@siarie.me',
-          link: env.productionUrl
-        });
-
-        let postList = fs.readdirSync('./content')
-        postList.forEach(post => {
-          const file = fs.readFileSync(`./content/${post}`, 'utf8')
-          const content = fm(file)
-          feed.addItem({
-            title: content.attributes.title,
-            link: `${env.productionUrl}/stories/${post.slice(0, -3)}/`,
-            description: marked(content.body),
-            date: new Date(content.attributes.date)
-          })
-        })
-      }
-    }
-  ],
   build: {
     extend(config, ctx) {
       config.module.rules.push({
         test: /\.md$/,
         use: ['raw-loader']
-      });
+      })
     }
   }
-};
+}

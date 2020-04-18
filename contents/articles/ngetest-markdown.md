@@ -1,12 +1,7 @@
 ---
-title: "Konten Pertama Saya"
+title: Ngetest Markdown
 date: 2019-10-05
-thumbnail: "/siarie.me.webp"
-description: "ini cuma contoh konten yang saya buat untuk memastikan bahwa saya berhasil menambahkan markdown"
-publish: true
 ---
-
-Huh... gak tau mau diisi apa ini konten. Yah intinya *it's just example*, ini cuma contoh konten yang saya buat untuk memastikan bahwa saya berhasil menambahkan *markdown content* di website saya ini. Hmmm.. daripada berhenti disini tak cobain markdown syntak-nya sekalian deh.
 
 # Heading 1
 ## Heading 2
@@ -16,8 +11,6 @@ Huh... gak tau mau diisi apa ini konten. Yah intinya *it's just example*, ini cu
 ###### Heading 6
 
 # Paragraph
-Sepertinya *Lorem Ipsum* merupakan text yang paling tepat buat ngetes pada bagian paragraph ini. Karna Lipsum ini sendiri merupakan teks standar yang ditempatkan untuk mendemonstrasikan elemen grafis atau presentasi visual seperti font, tipografi, dan tata letak. untuk text lipsum ini saya mengambilnya dari situs [Lorem Ipsum - All the facts - Lipsum generator](https://id.lipsum.com/)
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat, erat ut vestibulum dignissim, est nulla facilisis magna, vitae pulvinar est lorem eu lorem. Vestibulum euismod ligula non turpis egestas, eget placerat justo tristique. Morbi suscipit diam nec erat faucibus fringilla et nec enim. Quisque eleifend pellentesque cursus. Vestibulum rutrum tempor enim, eget ultricies metus. In feugiat pellentesque arcu. Pellentesque vitae interdum justo. Nam sed magna felis. Cras sed lectus ante. In iaculis purus vitae arcu interdum, eu dignissim ante consequat. Donec egestas cursus mauris tristique tincidunt. Proin dapibus eget ligula a rutrum. 
 
 # Blockquote

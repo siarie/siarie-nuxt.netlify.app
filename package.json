@@ -1,28 +1,27 @@
 {
   "name": "siarie.me",
   "version": "1.0.0",
-  "description": "My remarkable Nuxt.js project",
+  "description": "My personal website",
+  "main": "index.js",
   "author": "Sri Aspari",
-  "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/feed": "^1.1.0",
-    "@nuxtjs/sitemap": "^2.0.0",
-    "frontmatter-markdown-loader": "^3.3.0",
-    "highlight.js": "^9.15.10",
+    "glob": "^7.1.6",
+    "highlight.js": "^9.18.1",
+    "nuxt": "^2.12.2"
+  },
+  "devDependencies": {
+    "gray-matter": "^4.0.2",
     "marked": "^0.8.2",
     "moment": "^2.24.0",
-    "node-sass": "^4.12.0",
-    "nuxt": "^2.0.0",
+    "node-sass": "^4.13.1",
+    "pug": "^2.0.4",
+    "pug-plain-loader": "^1.0.0",
     "raw-loader": "^4.0.0",
-    "sass-loader": "^8.0.0",
-    "striptags": "^3.1.1",
-    "vue-feather-icons": "^5.0.0"
-  },
-  "devDependencies": {}
+    "sass-loader": "^8.0.2"
+  }
 }
